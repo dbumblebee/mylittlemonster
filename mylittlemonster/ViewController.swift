@@ -33,6 +33,13 @@ class ViewController: UIViewController {
     var sfxSkull: AVAudioPlayer!
     var sfxDeath: AVAudioPlayer!
     
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//print("IN viewDidAppear: \(foodImg.dropTarget?.frame)")
+//        foodImg.dropTarget = monsterImg
+//        heartImg.dropTarget = monsterImg
+//    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

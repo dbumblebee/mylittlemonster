@@ -35,8 +35,14 @@ class DragImg: UIImageView {
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first, let target = dropTarget {
             let position = touch.location(in: self.superview)
-          
+            
+            // if we rotate we have the wrong target frame for some reason
+           print("\(target.bounds)")
+            print("pos: \(position)")
+            print("\(target.frame)")
+            
             // swift 2 way - if CGRectContainsPoint(target.frame,position) {
+            
             if target.frame.contains(position) {
                 
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: "onTargetDropped"), object: nil)
